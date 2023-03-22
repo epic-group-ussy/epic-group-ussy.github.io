@@ -1,0 +1,95 @@
+/* Set the background color to a gradient of pink and orange */
+body {
+    background: linear-gradient(to bottom right, #ff8c00, #ff69b4);
+  }
+  
+  /* Style the header with white text and a pink background */
+  header {
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px;
+  }
+  
+  /* Style the navigation links */
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    color: #ff8c00;
+  }
+  
+  /* Style the main content */
+  main {
+    margin: 50px;
+  }
+  
+  section {
+    margin-bottom: 50px;
+  }
+  
+  h2 {
+    color: #ff69b4;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  strong {
+    color: #ff69b4;
+  }
+  
+  /* Style the contact form */
+  form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  button[type="submit"] {
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #ff8c00;
+  }
+  
