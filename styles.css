@@ -5,7 +5,7 @@ body {
   
   /* Style the header with white text and a pink background */
   header {
-    background-color: #ff69b4;
+    background-color: #F36917;
     color: white;
     padding: 10px;
   }
@@ -41,7 +41,7 @@ body {
   }
   
   h2 {
-    color: #ff69b4;
+    color: #0ba091;
   }
   
   ul {
@@ -55,7 +55,7 @@ body {
   }
   
   strong {
-    color: #ff69b4;
+    color: #3b0d9f;
   }
   
   /* Style the contact form */
@@ -81,7 +81,7 @@ body {
   }
   
   button[type="submit"] {
-    background-color: #ff69b4;
+    background-color: #1a85b3;
     color: white;
     padding: 10px 20px;
     border: none;
