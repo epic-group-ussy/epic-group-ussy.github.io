@@ -23,7 +23,5 @@ with open('input.txt', 'r') as f_in, open('questions.csv', 'w', newline='') as f
             while line.count(',') > 4:
                 line = line.replace(',', '`', 1)
             line = line.strip().split(',')
-            # Write the values to the output file
-            writer.writerow(line)
-
-            
+            # Write the values to the output file with a extra comma at the end
+            writer.writerow(line + [''])

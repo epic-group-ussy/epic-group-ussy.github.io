@@ -2,3 +2,67 @@
 .main_div {
     margin-left: 2%;    
 }
+
+/*styles the question boxes*/
+
+.question_box_div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    outline: 1px dashed #0ba091;
+  }
+  
+  .question_box_div label {
+    margin: 10px;
+  }
+  
+
+
+#question_class {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    padding: 2%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+input[type=checkbox] {
+    /* hide the default checkbox */
+    display: none;
+}
+
+label {
+    /* add a custom checkbox design */
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+
+/* create a custom box for the checkbox */
+label:before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+}
+
+/* style the checkbox when it's checked */
+input[type=checkbox]:checked + label:before {
+    content: "\2713"; /* add a checkmark symbol */
+    text-align: center;
+    color: #fff;
+    background-color: #44be07;
+    border: 1px solid #44be07;
+}
