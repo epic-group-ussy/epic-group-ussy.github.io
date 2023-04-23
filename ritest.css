@@ -11,12 +11,12 @@
     align-items: center;
     margin-bottom: 10px;
     outline: 1px dashed #0ba091;
-  }
+    }
   
-  .question_box_div label {
+.question_box_div label {
     margin: 10px;
-  }
-  
+}
+
 
 
 #question_class {
