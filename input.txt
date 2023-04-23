@@ -1,0 +1,300 @@
+questions.push(new createQuestion("You had your first kiss", 
+new createRating(1, 0), new createRating(-4, 0)
+));
+questions.push(new createQuestion("You swear regularly", 
+new createRating(0, .5), new createRating(0, -.5)
+));
+questions.push(new createQuestion("You played spin the bottle", 
+new createRating(1, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've made out with tounge", 
+new createRating(2, 0), new createRating(-2, 0)
+));
+questions.push(new createQuestion("Someone else has sucked your fingers (sexually)", 
+new createRating(2, 0), new createRating(-1, 0)
+));
+questions.push(new createQuestion("You have touched or been touched by someone sexually", 
+new createRating(1, 0), new createRating(-7, 0)
+));
+questions.push(new createQuestion("You've been bitten or bit someone else (sexually)", 
+new createRating(1.5, 0.5), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've had any type of sexual interaction", 
+new createRating(3, 0), new createRating(-3, 0)
+));
+questions.push(new createQuestion("You are a virgin", 
+new createRating(-6, 0), new createRating(.5, 0)
+));
+questions.push(new createQuestion("You've masturbated", 
+new createRating(.5, 0), new createRating(-5, 0)
+));
+questions.push(new createQuestion("You've been caught masturbating", 
+new createRating(.5, 1), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've masturbated looking at yourself in the mirror", 
+new createRating(1, 0), new createRating(-2, 0)
+));
+questions.push(new createQuestion("You've had/given handjob to someone else", 
+new createRating(2, 0), new createRating(-2, 0)
+));
+questions.push(new createQuestion("You've had intercourse (penatration)", 
+new createRating(2, 0), new createRating(-2, 0)
+));
+questions.push(new createQuestion("You've showered with someone your intrested in", 
+new createRating(2, 0), new createRating(-.5, 0)
+));
+questions.push(new createQuestion("You've kicked someone out to have sex, or warned someone that you were having sex to be alone", 
+new createRating(1, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've smoked weed ever", 
+new createRating(0, 2), new createRating(0, -2)
+));
+questions.push(new createQuestion("You've been drunk ever", 
+new createRating(0, 3), new createRating(0, -3)
+));
+questions.push(new createQuestion("You've been involved in a drinking game", 
+new createRating(0, 3), new createRating(0, -1)
+));
+questions.push(new createQuestion("Faked sobriety to avoid getting in trouble", 
+new createRating(0, 1), new createRating(0, 0)
+));
+questions.push(new createQuestion("Smoked nicotine", 
+new createRating(0, 1.5), new createRating(0, 0)
+));
+questions.push(new createQuestion("Smoked cigarettes", 
+new createRating(0, 2.5), new createRating(0, 0)
+));
+questions.push(new createQuestion("Had memory loss due to substances", 
+new createRating(0, 4), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've had/given a hickey", 
+new createRating(2, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("Swallowed cum or other sexual fluids", 
+new createRating(4, 0), new createRating(-4, 0)
+));
+questions.push(new createQuestion("You've slept like a homeless person for at least one night", 
+new createRating(0, 4), new createRating(0, -1)
+));
+questions.push(new createQuestion("You've been crossed (High + Drunk)", 
+new createRating(0, 3.9), new createRating(0, -3)
+));
+questions.push(new createQuestion("You've tripped on shrooms", 
+new createRating(0, 6), new createRating(0, -1)
+));
+questions.push(new createQuestion("You've been in a serious physical fight", 
+new createRating(.05, 7), new createRating(0, -.5)
+));
+questions.push(new createQuestion("You've had sexual thoughts about sammy", 
+new createRating(0, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've had some sort sex in a car", 
+new createRating(3, 3), new createRating(-1, -1)
+));
+questions.push(new createQuestion("You've had some sort of sex outside", 
+new createRating(3, 3), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've used a glory hole without knowing who was on the other side", 
+new createRating(6, 7), new createRating(-1, -2)
+));
+questions.push(new createQuestion("You've been drunk in public", 
+new createRating(0, 2), new createRating(0, -3)
+));
+questions.push(new createQuestion("You've broken into anywhere illegally", 
+new createRating(0, 3), new createRating(0, -3)
+));
+questions.push(new createQuestion("You've almost crashed while driving and listening to WAP/tokio drift/I will survive/etc", 
+new createRating(0, 4), new createRating(0, -2)
+));
+questions.push(new createQuestion("You've played a strip game", 
+new createRating(4, 0.5), new createRating(-4, -1)
+));
+questions.push(new createQuestion("You've legitimetly considered suicide", 
+new createRating(0, 2), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've gotten caught by, or had to run from the police", 
+new createRating(0, 2), new createRating(0, -2)
+));
+questions.push(new createQuestion("You've sent sexts", 
+new createRating(2, 0.5), new createRating(-2, -.5)
+));
+questions.push(new createQuestion("You've sent nudes", 
+new createRating(3, 3), new createRating(-3, -2)
+));
+questions.push(new createQuestion("You held someone at gunpoint (life threatening)", 
+new createRating(0, 15), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've skinny dipped in public", 
+new createRating(3, 3), new createRating(-3, -1)
+));
+questions.push(new createQuestion("You've stolen something small (e.g., candy, pen)", 
+new createRating(0, 0), new createRating(0, -5)
+));
+questions.push(new createQuestion("Committed any type of vandalism", 
+new createRating(0, 1), new createRating(0, -2)
+));
+questions.push(new createQuestion("You've watched porn", 
+new createRating(.5, 0), new createRating(-1, 0)
+));
+questions.push(new createQuestion("You've watched porn in public", 
+new createRating(2, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've watched porn in a classroom", 
+new createRating(4, 4), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've had sex with someone who was already in a relationship with someone else", 
+new createRating(4, 4), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've had a sexual fantasy or desire that involved non-consensual or dangerous behavior?", 
+new createRating(2, 3), new createRating(0, 0)
+));
+questions.push(new createQuestion("You went streaking", 
+new createRating(2, 4), new createRating(0, 0)
+));
+questions.push(new createQuestion("You had sex in a body of water", 
+new createRating(3, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("Had sex with a virgin", 
+new createRating(1, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("Had sex with a person who is under 18", 
+new createRating(3, 1), new createRating(-1, 0)
+));
+questions.push(new createQuestion("You had multiple types of sex more than 10 times", 
+new createRating(4, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("You went to a strip club", 
+new createRating(.5, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've had sex with a stranger or someone you met very recently", 
+new createRating(5, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("You have had some sort of sex with a being of a different species", 
+new createRating(12, 18), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've had sex with more than one person in the same day", 
+new createRating(3, 0), new createRating(-1, 0)
+));
+questions.push(new createQuestion("You've had any type of sex while intoxicated", 
+new createRating(3, 4), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've had unprotected sex", 
+new createRating(2, 3), new createRating(-1, 0)
+));
+questions.push(new createQuestion("You've had a threesome", 
+new createRating(3, 0), new createRating(-.5, 0)
+));
+questions.push(new createQuestion("You've had sex involving more than 3 people", 
+new createRating(3, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've had an STI scare", 
+new createRating(1, 2), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've had a pregnancy scare", 
+new createRating(1, 2), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've done incest",
+new createRating(7, 7), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've been payed for sex",
+new createRating(4, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("You like to engage in BDSM, ropes, cages, restraints, etc.",
+new createRating(4, .5), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've crashed a car and had to go to the hospital",
+new createRating(0, 6), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've crashed a car and had to go to the hospital while intoxicated",
+new createRating(0, 6), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've been taken to jail",
+new createRating(0, 7), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've bought someone discord nitro", 
+new createRating(-3, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've chlorine gassed someone house and it doesn't kill anybody", 
+new createRating(0, 2.5), new createRating(0, 0)
+));
+questions.push(new createQuestion("You wash your hair with bar soap", 
+new createRating(-.5, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("You wear shower shoes in public showers", 
+new createRating(-.5, 0), new createRating(0, 1)
+));
+questions.push(new createQuestion("You've worn toe socks", 
+new createRating(0, 0.5), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've been involved in a riot", 
+new createRating(0, 6), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've rizzed up a porn star", 
+new createRating(4, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've done meth for non medicinal purposes intentionally", 
+new createRating(0, 6), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've done cocaine intentionally", 
+new createRating(0, 5), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've done heroin or horse tranquilizers intentionally", 
+new createRating(0, 11), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've done fentanyl intentionally", 
+new createRating(0, 15), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've committed arson with potential for significant jailtime", 
+new createRating(0, 22), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've committed murder", 
+new createRating(4, 100), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've committed murder via orgasm (cum kills)", 
+new createRating(400, 100), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've committed rape", 
+new createRating(12, 13), new createRating(0, 0)
+));
+questions.push(new createQuestion("You have a foot fetish or have participated in someones foot fetish", 
+new createRating(2, 0), new createRating(-.5, 0)
+));
+questions.push(new createQuestion("You've done butt stuff",
+new createRating(2.5, 0), new createRating(-.5, 0)
+));
+questions.push(new createQuestion("You've engaged in furry sexy stuff", 
+new createRating(4, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've engaged in watersports or other forms of urolagnia?", 
+new createRating(4, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've done multiple sex positions in one session", 
+new createRating(2, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("You are queer", 
+new createRating(0, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("You use ASMR for sexual reasons", 
+new createRating(1, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've used emojis with a skintone that does not corelate with your own (yellow doesn't count)", 
+new createRating(0, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've said slurs that are not pointed at yourself", 
+new createRating(0, 1), new createRating(0, -1)
+));
+questions.push(new createQuestion("You've engaged in puke sex", 
+new createRating(4, 2), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've shit on someone else or they have shit on you", 
+new createRating(4, 2), new createRating(0, 0)
+));
+questions.push(new createQuestion("You've engaged in period sex", 
+new createRating(4, 0), new createRating(0, 0)
+));
+questions.push(new createQuestion("You have said uwu or owo unironically", 
+new createRating(.5, .5), new createRating(0, 0)
+));
+questions.push(new createQuestion("You were comfortable taking this test", 
+new createRating(1, 1), new createRating(-1, -1)
+));
