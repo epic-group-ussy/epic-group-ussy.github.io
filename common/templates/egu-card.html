@@ -1,0 +1,40 @@
+<style>
+  .egu-card-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .egu-card {
+    background-color: var(--light);
+    border-radius: 2rem;
+    max-height: 18rem;
+    min-height: 14rem;
+    width: 20rem;
+    margin-top: 2rem;
+    color: var(--secondary);
+    text-align: center;
+  }
+
+  .egu-card[href] {
+    cursor: pointer;
+  }
+
+  .egu-card[href='null'] {
+    cursor: unset;
+  }
+
+  .egu-card>img:first-child {
+    border-radius: 2rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    height: calc(100% - 4rem);
+  }
+</style>
+<div href='$href' class='egu-card'>
+  <img src="$img-src"></img>
+  $inner
+</div>
