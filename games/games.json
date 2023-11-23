@@ -2,16 +2,19 @@
     "mafia": {
         "name": "mafia",
         "url": "https://mafia.mom/",
-        "github": "https://github.com/ItsSammyM/mafia-rust"
+        "github": "https://github.com/ItsSammyM/mafia-rust",
+        "image": "./images/mafia.jpg"
     },
     "slap ball": {
         "name": "slap ball",
-        "url": "https://ize69.github.io/slapball/slapball-main/index.htm",
-        "github": "https://github.com/ize69/slapball"
+        "url": "https://ize69.github.io/slapball/slapball-main/index.html",
+        "github": "https://github.com/ize69/slapball",
+        "image": "./images/slapball.jpg"
     },
     "da baby breakout": {
         "name": "Da Baby Breakout",
         "url": "https://ize69.github.io/dabbaby/dababy%20game/index.html",
-        "github": "https://github.com/ize69/dabbaby"
+        "github": "https://github.com/ize69/dabbaby",
+        "image": "./images/dababy.jpg"
     }
 }

@@ -26,14 +26,25 @@
 
         for (const thegame in games) {
           const game = games[thegame];
-          const card = document.createElement('egu-card');
-          card.setAttribute('href', game.url);
+          const card = document.createElement('div');
+          card.classList.add('egu-card');
 
-          card.innerHTML = `<h3>${game.name}</h3>`;
+          const image = new Image();
+          image.classList.add('thumbnail-image');
+          image.setAttribute('src', `${game.image}`);
+          image.setAttribute('herf', game.url);
+          const title = document.createElement('h3');
+          title.textContent = game.name;
+
+          card.appendChild(image);
+          card.appendChild(title);
           container.appendChild(card);
-          //print every game found in the json file
+
           console.log(game.name);
         }
+      })
+      .catch(error => {
+        console.error('Error fetching games:', error);
       });
   </script>
 </body>
