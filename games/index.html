@@ -24,13 +24,16 @@
         const container = document.querySelector('.egu-card-container');
         container.innerHTML = ''; // Clear the container
 
-        games.forEach(game => {
+        for (const thegame in games) {
+          const game = games[thegame];
           const card = document.createElement('egu-card');
           card.setAttribute('href', game.url);
 
           card.innerHTML = `<h3>${game.name}</h3>`;
           container.appendChild(card);
-        });
+          //print every game found in the json file
+          console.log(game.name);
+        }
       });
   </script>
 </body>
