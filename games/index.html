@@ -31,13 +31,10 @@
           card.classList.add('egu-card');
           card.setAttribute('img-src', `${game.image}`);
           card.setAttribute('name', game.name);
-
           const title = document.createElement('h3');
           title.textContent = game.name;
-
           card.appendChild(title);
           container.appendChild(card);
-
           console.log(game.name);
         }
       })
