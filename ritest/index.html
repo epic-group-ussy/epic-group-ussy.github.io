@@ -7,128 +7,145 @@
 
   <link rel="stylesheet" type="text/css" href="/common/styles.css">
   <script type="text/javascript" src="/common/common.js"></script>
+  <script type="text/javascript" src="/jquery-3.6.4.min.js"></script>
   <link rel="stylesheet" type="text/css" href="./index.css">
 </head>
 
 <body>
   <egu-main>
-    <div class="main_div">
-      <h1>The RITZZ Test</h1>
-      <h3>This test uses the 2 pillars of pureness: sex and danger.</h3>
-      <div id="checkboxes" class="question_class">
+    <section id="ritzz">
+      <h2>The RITZZ purity Test</h2>
+      <p>This test uses the 2 pillars of pureness: sex and danger.</p>
+
+      <ol id="checkboxes">
         <!--checkboxes are added here-->
+      </ol>
+      <div id='score'>
+        <h4>Your Score:</h4>
+        <span id="output"></span>
+      </div>
+      <div id='extrema'>
+        <div>
+          <h4>Maximum Sex:</h4>
+          <span id="maxSex"></span>
+        </div>
+        <div>
+          <h4>Minimum Sex:</h4>
+          <span id="minSex"></span>
+        </div>
+        <div>
+          <h4>Maximum Danger:</h4>
+          <span id="maxDanger"></span>
+        </div>
+        <div>
+          <h4>Minimum Danger:</h4>
+          <span id="minDanger"></span>
+        </div>
       </div>
       <br />
-      <button id="submit">Calculate</button>
-      <div>
-        <br />
-        Your Score: <div id="output"></div>
-        <br /> <br />
-        Max-Sex: <div id="maxSex"></div>
-        Min-Sex: <div id="minSex"></div>
-        Max-Danger: <div id="maxDanger"></div>
-        Min-Danger: <div id="minDanger"></div>
-      </div>
-      <br />
-      if you have ideas for questions, dm me.
-    </div>
-    <script src="jquery-3.6.4.min.js"></script>
+      If you have ideas for questions, contact us.
+    </section>
 
     <script>
-      // Define a function to load the questions from the CSV file
       let questions = [];
-      function loadQuestions() {
-        // Load the CSV file using jQuery's $.get method
-        $.get("questions.csv", function (csv) {
-          let lines = csv.split("\n");
-          for (let i = 0; i < lines.length - 1; i++) {
-            let line = lines[i].split(",");
-            //casts line[0] to a string, and the rest ot floats
-            //console.log(line[0] + " " + line[1] + " " + line[2] + " " + line[3] + " " + line[4]);
-            questions.push(new createQuestion(String(line[0]),
-              new createRating(parseFloat(line[1]), parseFloat(line[2])),
-              new createRating(parseFloat(line[3]), parseFloat(line[4]))
-            ));
-          }
-          for (let i = 0; i < questions.length; i++) {
-            document.getElementById("checkboxes").innerHTML += questions[i].htmlString(i);
-          }
-          document.getElementById("submit").addEventListener("click", () => {
-            let totalRating = new createRating(0, 0);
 
-            let maxSexRating = new createRating(0, 0);
-            let maxDangerRating = new createRating(0, 0);
-            let minSexRating = new createRating(0, 0);
-            let minDangerRating = new createRating(0, 0);
-
-            for (let i = 0; i < questions.length; i++) {
-              if (document.getElementById(`${i}`).checked) {
-                totalRating = addRatings(totalRating, questions[i].checkedRating);
-              } else {
-                totalRating = addRatings(totalRating, questions[i].uncheckedRating);
-              }
-
-              //for finding max&min total sex rating and max&mim total danger rating
-              if (questions[i].checkedRating.sexValue > questions[i].uncheckedRating.sexValue) {
-                maxSexRating = addRatings(maxSexRating, questions[i].checkedRating);
-                minSexRating = addRatings(minSexRating, questions[i].uncheckedRating);
-              } else {
-                maxSexRating = addRatings(maxSexRating, questions[i].uncheckedRating);
-                minSexRating = addRatings(minSexRating, questions[i].checkedRating);
-              }
-
-              if (questions[i].checkedRating.dangerValue > questions[i].uncheckedRating.dangerValue) {
-                maxDangerRating = addRatings(maxDangerRating, questions[i].checkedRating);
-                minDangerRating = addRatings(minDangerRating, questions[i].uncheckedRating);
-              } else {
-                maxDangerRating = addRatings(maxDangerRating, questions[i].uncheckedRating);
-                minDangerRating = addRatings(minDangerRating, questions[i].checkedRating);
-              }
-            }
-            document.getElementById("output").innerHTML = ratingToString(totalRating);
-            // `<br/>Sex Points: ${Math.round(totalRating.sexValue*100)/100}<br/> Danger Points: ${Math.round(totalRating.dangerValue*100)/100}`;
-            document.getElementById("maxSex").innerHTML = ratingToString(maxSexRating);
-            document.getElementById("minSex").innerHTML = ratingToString(minSexRating);
-            document.getElementById("maxDanger").innerHTML = ratingToString(maxDangerRating);
-            document.getElementById("minDanger").innerHTML = ratingToString(minDangerRating);
-
-          });
-        });
-      }
-      // Call the loadQuestions function after the jQuery library has loaded
-      $(document).ready(function () {
-        loadQuestions();
-      });
-
-
-      //question "class"
-      function createQuestion(question, checkedRating, uncheckedRating) {
-        this.htmlString = (index) => {
-          return `<div class="question_box_div">${index + 1}: <input type="checkbox" id="${index}"> <label for=\"${index}\"">${question}</label></div>`
-        }
+      function Question(question, checkedRating, uncheckedRating) {
+        this.text = question;
         this.checkedRating = checkedRating;
         this.uncheckedRating = uncheckedRating;
+
         return this;
       }
 
-      //rating "class"
-      function createRating(sexValue, dangerValue) {
+      function Rating(sexValue, dangerValue) {
         this.sexValue = sexValue;
         this.dangerValue = dangerValue;
+        this.asHTML = () =>
+          `
+          Sex Points: ${Math.round(this.sexValue * 100) / 100}
+          <br/>
+          Danger Points: ${Math.round(this.dangerValue * 100) / 100}
+          `
+        this.add = other => new Rating(
+          this.sexValue + other.sexValue,
+          this.dangerValue + other.dangerValue
+        );
+
         return this;
       }
-      function addRatings(rating1, rating2) {
-        return new createRating(
-          rating1.sexValue + rating2.sexValue,
-          rating1.dangerValue + rating2.dangerValue
-        );
-      }
-      function ratingToString(r) {
-        return `Sex Points: ${Math.round(r.sexValue * 100) / 100}<br/> Danger Points: ${Math.round(r.dangerValue * 100) / 100}<br/><br/>`;
+
+      function showExtremaScores() {
+        let ratings = {
+          maxSex: new Rating(0, 0),
+          maxDanger: new Rating(0, 0),
+          minSex: new Rating(0, 0),
+          minDanger: new Rating(0, 0),
+        }
+
+        for (const question of questions) {
+          //for finding max&min total sex rating and max&mim total danger rating
+          if (question.checkedRating.sexValue > question.uncheckedRating.sexValue) {
+            ratings.maxSex = ratings.maxSex.add(question.checkedRating);
+            ratings.minSex = ratings.minSex.add(question.uncheckedRating);
+          } else {
+            ratings.maxSex = ratings.maxSex.add(question.uncheckedRating);
+            ratings.minSex = ratings.minSex.add(question.checkedRating);
+          }
+
+          if (question.checkedRating.dangerValue > question.uncheckedRating.dangerValue) {
+            ratings.maxDanger = ratings.maxDanger.add(question.checkedRating);
+            ratings.minDanger = ratings.minDanger.add(question.uncheckedRating);
+          } else {
+            ratings.maxDanger = ratings.maxDanger.add(question.uncheckedRating);
+            ratings.minDanger = ratings.minDanger.add(question.checkedRating);
+          }
+        }
+
+        document.getElementById("maxSex").innerHTML = ratings.maxSex.asHTML();
+        document.getElementById("minSex").innerHTML = ratings.minSex.asHTML();
+        document.getElementById("maxDanger").innerHTML = ratings.maxDanger.asHTML();
+        document.getElementById("minDanger").innerHTML = ratings.minDanger.asHTML();
       }
 
+      function showScore() {
+        let score = new Rating(0, 0);
+
+        for (const [i, question] of questions.entries()) {
+          if (document.getElementById(`question-${i}`).checked) {
+            score = score.add(question.checkedRating);
+          } else {
+            score = score.add(question.uncheckedRating);
+          }
+        }
+
+        document.getElementById("output").innerHTML = score.asHTML();
+      }
+
+      fetch("questions.csv")
+        .then(res => res.text())
+        .then(text => {
+          const csvQuestions = text.split('\n')
+            .map(line => line.split(','))
+            .map(values => new Question(values[0],
+              new Rating(parseFloat(values[1]), parseFloat(values[2])),
+              new Rating(parseFloat(values[3]), parseFloat(values[4]))
+            ));
+
+          csvQuestions.forEach((question, index) => {
+            document.getElementById("checkboxes").innerHTML += `
+              <li>
+                <input type="checkbox" onclick="showScore()" id="question-${index}">
+                <label for="question-${index}">${question.text}</label>
+              </li>
+            `
+          })
+
+          questions = csvQuestions;
+        })
+        .then(showExtremaScores)
+        .then(showScore);
     </script>
-    </egu-m>
+  </egu-main>
 </body>
 
 </html>
