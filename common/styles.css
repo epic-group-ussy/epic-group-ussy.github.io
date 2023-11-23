@@ -66,3 +66,13 @@ a {
 a:hover {
   color: var(--highlight);
 }
+
+ol {
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+ol li {
+  margin-left: 2rem;
+  margin-bottom: 0.2rem;
+}
