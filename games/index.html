@@ -26,20 +26,15 @@
 
         for (const thegame in games) {
           const game = games[thegame];
-          const card = document.createElement('div');
+          const card = document.createElement('egu-card');
+          card.setAttribute('href', game.url);
           card.classList.add('egu-card');
+          card.setAttribute('img-src', `${game.image}`);
+          card.setAttribute('name', game.name);
 
-          const image = new Image();
-          image.classList.add('thumbnail-image');
-          //set the image and scale it to fit the card
-          image.setAttribute('width', '75%');
-          image.setAttribute('height', '75%');
-          image.setAttribute('src', `${game.image}`);
-          image.setAttribute('href', game.url);
           const title = document.createElement('h3');
           title.textContent = game.name;
 
-          card.appendChild(image);
           card.appendChild(title);
           container.appendChild(card);
 
