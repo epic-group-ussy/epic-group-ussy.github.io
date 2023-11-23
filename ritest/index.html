@@ -7,7 +7,6 @@
 
   <link rel="stylesheet" type="text/css" href="/common/styles.css">
   <script type="text/javascript" src="/common/common.js"></script>
-  <script type="text/javascript" src="/jquery-3.6.4.min.js"></script>
   <link rel="stylesheet" type="text/css" href="./index.css">
 </head>
 
@@ -84,7 +83,10 @@
 
         for (const question of questions) {
           //for finding max&min total sex rating and max&mim total danger rating
-          if (question.checkedRating.sexValue > question.uncheckedRating.sexValue) {
+          if (question.checkedRating.sexValue == question.uncheckedRating.sexValue) {
+            ratings.maxSex = ratings.maxSex.add(question.uncheckedRating);
+            ratings.minSex = ratings.minSex.add(question.uncheckedRating);
+          } else if (question.checkedRating.sexValue > question.uncheckedRating.sexValue) {
             ratings.maxSex = ratings.maxSex.add(question.checkedRating);
             ratings.minSex = ratings.minSex.add(question.uncheckedRating);
           } else {
@@ -92,7 +94,10 @@
             ratings.minSex = ratings.minSex.add(question.checkedRating);
           }
 
-          if (question.checkedRating.dangerValue > question.uncheckedRating.dangerValue) {
+          if (question.checkedRating.dangerValue == question.uncheckedRating.dangerValue) {
+            ratings.maxDanger = ratings.maxDanger.add(question.uncheckedRating);
+            ratings.minDanger = ratings.minDanger.add(question.uncheckedRating);
+          } else if (question.checkedRating.dangerValue > question.uncheckedRating.dangerValue) {
             ratings.maxDanger = ratings.maxDanger.add(question.checkedRating);
             ratings.minDanger = ratings.minDanger.add(question.uncheckedRating);
           } else {
