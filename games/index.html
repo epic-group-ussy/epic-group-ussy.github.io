@@ -31,6 +31,9 @@
 
           const image = new Image();
           image.classList.add('thumbnail-image');
+          //set the image and scale it to fit the card
+          image.setAttribute('width', '100%');
+          image.setAttribute('height', '100%');
           image.setAttribute('src', `${game.image}`);
           image.setAttribute('herf', game.url);
           const title = document.createElement('h3');
