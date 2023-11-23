@@ -1,12 +1,12 @@
 {
     "mafia": {
-        "name": "mafia",
+        "name": "Mafia",
         "url": "https://mafia.mom/",
         "github": "https://github.com/ItsSammyM/mafia-rust",
         "image": "./images/mafia.jpg"
     },
     "slap ball": {
-        "name": "slap ball",
+        "name": "Slap Ball",
         "url": "https://ize69.github.io/slapball/slapball-main/index.html",
         "github": "https://github.com/ize69/slapball",
         "image": "./images/slapball.jpg"
