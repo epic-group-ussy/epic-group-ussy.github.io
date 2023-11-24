@@ -9,7 +9,14 @@ class EguMainElement extends HTMLElement {
             .then(res => res.text())
             .then(text => {
                 this.outerHTML = text.replace('$inner', this.innerHTML)
-            });
+            })
+            .then(() => {
+                if (!document.head.innerHTML.includes('egu-main.css')) {
+                    document.head.innerHTML += `
+                        <link rel="stylesheet" type="text/css" href="/common/templates/egu-main.css">
+                    `;
+                }
+            })
     }
 }
 
@@ -28,7 +35,7 @@ class EguPersonCardElement extends HTMLElement {
 
                 this.outerHTML = text
                     .replace('$href', href ? `href=${href}` : '')
-                    .replace('$img-src', this.attributes.getNamedItem('img-src')?.textContent ?? 'null')
+                    .replace('$img-src', this.attributes.getNamedItem('img-src')?.textContent ?? '/members/gabes-father.png')
                     .replace('$inner', this.innerHTML);
             })
             .then(() => {
@@ -36,10 +43,15 @@ class EguPersonCardElement extends HTMLElement {
                 // that I dont care.
                 document.querySelectorAll(".egu-card").forEach(el => {
                     const href = el.attributes.getNamedItem('href')?.textContent;
-                    if (href) {
-                        el.addEventListener('click', () => window.location = href)
-                    }
+                    el.addEventListener('click', () => window.location = href ?? '/members/wip')
                 });
+            })
+            .then(() => {
+                if (!document.head.innerHTML.includes('egu-card.css')) {
+                    document.head.innerHTML += `
+                        <link rel="stylesheet" type="text/css" href="/common/templates/egu-card.css">
+                    `;
+                }
             })
     }
 }

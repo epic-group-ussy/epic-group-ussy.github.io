@@ -1,0 +1,42 @@
+.egu-card-container {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.egu-card {
+  background-color: var(--primary);
+  border-radius: 2rem;
+  max-height: 16rem;
+  min-height: 12rem;
+  width: 18rem;
+  max-width: 24rem;
+  margin: 1rem;
+  margin-bottom: 0;
+  margin-top: 2rem;
+  color: var(--dark);
+  flex-grow: 1;
+  text-align: center;
+  overflow: hidden;
+  /* Hide overflow */
+}
+
+.egu-card {
+  cursor: pointer;
+}
+
+.egu-card:hover {
+  outline-color: var(--primary);
+  outline-width: 2px;
+  outline-style: solid;
+}
+
+.egu-card>img:first-child {
+  border-radius: 2rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  height: calc(100% - 4rem);
+}

@@ -19,17 +19,6 @@ body {
   font-family: 'Mochiy Pop One', sans-serif;
 }
 
-header {
-  background-color: var(--dark);
-  color: var(--light);
-  padding: 2rem;
-  text-align: center;
-}
-
-header h1 {
-  color: var(--primary)
-}
-
 main {
   padding: 4rem;
   color: var(--light);

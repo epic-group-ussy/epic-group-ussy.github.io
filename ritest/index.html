@@ -23,6 +23,7 @@
         <h4>Your Score:</h4>
         <span id="output"></span>
       </div>
+      <h3>Max possible scores:</h3>
       <div id='extrema'>
         <div>
           <h4>Maximum Sex:</h4>
@@ -131,7 +132,7 @@
         .then(text => {
           const csvQuestions = text.split('\n')
             .map(line => line.split(','))
-            .map(values => new Question(values[0],
+            .map(values => new Question(values[0].replace(/`/g, ','),
               new Rating(parseFloat(values[1]), parseFloat(values[2])),
               new Rating(parseFloat(values[3]), parseFloat(values[4]))
             ));

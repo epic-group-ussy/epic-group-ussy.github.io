@@ -37,7 +37,20 @@
 }
 
 #ritzz #score {
-  padding-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--dark);
+  width: fit-content;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 1300px) {
+  #ritzz #score {
+    position: fixed;
+    right: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 #ritzz #extrema {
@@ -45,6 +58,8 @@
   justify-content: left;
   flex-wrap: wrap;
   padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
   padding-bottom: 0;
   background-color: var(--dark);
 }

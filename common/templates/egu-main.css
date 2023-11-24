@@ -1,0 +1,29 @@
+header.egu-main {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 2rem;
+  text-align: center;
+}
+
+header.egu-main h1 {
+  color: var(--primary)
+}
+
+header.egu-main nav ul {
+  padding-top: 1rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+header.egu-main nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+footer.egu-main {
+  background-color: var(--dark);
+  color: var(--light);
+  text-align: center;
+  flex-grow: 1;
+}
