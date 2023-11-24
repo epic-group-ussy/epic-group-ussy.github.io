@@ -1,42 +1,46 @@
-input[type=checkbox] {
+#ritzz input[type=checkbox] {
   /* hide the default checkbox */
   display: none;
 }
 
-label {
+#ritzz label {
   /* add a custom checkbox design */
   position: relative;
   cursor: pointer;
   padding-left: 1.3em;
 }
 
+#ritzz li:hover {
+  color: var(--primary);
+}
+
 /* create a custom box for the checkbox */
-label:before {
+#ritzz label:before {
   content: "";
   display: inline-block;
   width: 1em;
   height: 1em;
+  line-height: 1;
   margin-right: 10px;
   position: absolute;
   left: 0;
   bottom: 1px;
-  background-color: #f4f4f4;
-  border: 1px solid #ccc;
+  background-color: var(--light);
+  border: 1px solid var(--dark);
 }
 
-input[type=checkbox]:checked+label:before {
-  content: "\2713";
+#ritzz input[type=checkbox]:checked+label:before {
+  content: "✔";
   text-align: center;
-  color: #fff;
-  background-color: #44be07;
-  border: 1px solid #44be07;
+  color: var(--light);
+  background-color: var(--primary);
 }
 
-#score {
+#ritzz #score {
   padding-bottom: 2rem;
 }
 
-#extrema {
+#ritzz #extrema {
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
@@ -49,7 +53,7 @@ input[type=checkbox]:checked+label:before {
   color: var(--primary);
 }
 
-#extrema>div {
+#ritzz #extrema>div {
   padding-bottom: 1rem;
   padding-right: 5rem;
   flex-grow: 1;
