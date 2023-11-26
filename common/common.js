@@ -35,7 +35,7 @@ class EguPersonCardElement extends HTMLElement {
 
                 this.outerHTML = text
                     .replace('$href', href ? `href=${href}` : '')
-                    .replace('$img-src', this.attributes.getNamedItem('img-src')?.textContent ?? '/members/gabes-father.png')
+                    .replace('$img-src', this.attributes.getNamedItem('img-src')?.textContent ?? '/members/gabes-father.jpg')
                     .replace('$inner', this.innerHTML);
             })
             .then(() => {
