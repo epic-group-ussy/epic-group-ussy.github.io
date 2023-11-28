@@ -4,9 +4,7 @@
   flex-wrap: wrap;
 }
 
-.egu-card {
-  background-color: var(--primary);
-  border-radius: 2rem;
+.egu-card-container>a {
   max-height: 16rem;
   min-height: 12rem;
   width: 18rem;
@@ -14,14 +12,17 @@
   margin: 1rem;
   margin-bottom: 0;
   margin-top: 2rem;
-  color: var(--dark);
   flex-grow: 1;
-  text-align: center;
-  overflow: hidden;
-  /* Hide overflow */
+  cursor: pointer;
 }
 
 .egu-card {
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary);
+  border-radius: 2rem;
+  color: var(--dark);
+  text-align: center;
   cursor: pointer;
 }
 
