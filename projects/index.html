@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>EGU</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/common/styles.css">
+  <script>
+    function createCard(project) {
+      const card = document.createElement('egu-card');
+
+      if (project.href) card.setAttribute('href', project.href);
+      if (project.imgUrl) card.setAttribute('img-src', project.imgUrl);
+      if (project.title) card.innerHTML += `<h3>${project.title}</h3>`;
+      if (project.subtitle) card.innerHTML += `<p>${project.subtitle}</p>`;
+      return card;
+    }
+    fetch('projects.json')
+      .then(response => response.json())
+      .then(json => {
+        for (const [section, projects] of Object.entries(json)) {
+          for (const projectCard of projects.map(createCard)) {
+            document.querySelector(`#${section}>.egu-card-container`).appendChild(projectCard)
+          }
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching games:', error);
+      });
+  </script>
+  <script type="text/javascript" src="/common/common.js"></script>
+</head>
+
+<body>
+  <egu-main>
+    <section id="games">
+      <h2>Games</h2>
+      <div class="egu-card-container">
+
+      </div>
+    </section>
+    <section id="projects">
+      <h2>Other projects</h2>
+      <div class="egu-card-container">
+
+      </div>
+    </section>
+  </egu-main>
+</body>
+
+</html>

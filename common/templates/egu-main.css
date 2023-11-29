@@ -11,12 +11,17 @@ header.egu-main h1 {
 
 header.egu-main nav ul {
   padding-top: 1rem;
+}
+
+header.egu-main nav ul,
+footer.egu-main nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
 }
 
-header.egu-main nav li {
+header.egu-main nav li,
+footer.egu-main nav li {
   display: inline-block;
   margin-right: 20px;
 }
@@ -26,4 +31,8 @@ footer.egu-main {
   color: var(--light);
   text-align: center;
   flex-grow: 1;
+}
+
+footer.egu-main a {
+  text-decoration: underline;
 }

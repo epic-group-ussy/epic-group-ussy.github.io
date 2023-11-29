@@ -1,0 +1,33 @@
+{
+    "games": [
+        {
+            "title": "Mafia",
+            "imgUrl": "./images/mafia.jpg",
+            "href": "https://mafia.mom/",
+            "github": "https://github.com/ItsSammyM/mafia-rust"
+        },
+        {
+            "title": "Slap Ball",
+            "subtitle": "Isaac Worsencroft",
+            "imgUrl": "./images/slapball.jpg",
+            "href": "https://ize69.github.io/slapball/slapball-main/index.html",
+            "github": "https://github.com/ize69/slapball"
+        },
+        {
+            "title": "Da Baby Breakout",
+            "subtitle": "Isaac Worsencroft",
+            "imgUrl": "./images/dababy.jpg",
+            "href": "https://ize69.github.io/dabbaby/dababy%20game/index.html",
+            "github": "https://github.com/ize69/dabbaby"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Mlang",
+            "subtitle": "Jack Papel",
+            "imgUrl": "https://www.jackpapel.com/src/portfolio/mlang-background.png",
+            "href": "https://www.jackpapel.com/mlang-online-playground",
+            "github": "https://www.github.com/Jack-Papel/website"
+        }
+    ]
+}
