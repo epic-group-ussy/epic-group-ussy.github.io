@@ -86,6 +86,8 @@ ol li {
 
 /* Don't render custom elements until the JS has handled them */
 egu-main,
+
+egu-product,
 egu-card {
   display: none;
 }
