@@ -6,6 +6,7 @@
       <li><a href="/members">Members</a></li>
       <li><a href="/projects">Games</a></li>
       <li><a href="/ritest">RITest</a></li>
+      <li><a href="/shop">Shop</a></li>
     </ul>
   </nav>
 </header>
@@ -13,7 +14,16 @@
   $inner
 </main>
 <footer class="egu-main">
-  <p>&copy; 2023 "Epic Group!"ussy</p>
+  <p id="copyright"></p>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let now = new Date();
+      let year = now.getFullYear();
+
+      let footerP = document.getElementById('copyright');
+      footerP.innerHTML = `&copy; ${year} Epic Group!`;
+    });
+  </script>
   <nav>
     <ul>
       <li><a href="https://www.github.com/epic-group-ussy">Github</a></li>
