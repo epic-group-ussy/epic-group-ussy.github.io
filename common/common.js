@@ -39,5 +39,5 @@ defineTemplate('egu-card', {
 
 defineTemplate('egu-product', {
     href: '/shop/wip',
-    ['img-src']: '/members/gabes-father.jpg'
+    ['img-src']: '/shop/Ε Γ Υ.jpg'
 });
